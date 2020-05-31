@@ -1,0 +1,11 @@
+h1, p {
+  font-family: Lato;
+}
+
+.is-active {
+  font-weight:bold
+}
+
+.app-title{
+text-decoration:none
+}

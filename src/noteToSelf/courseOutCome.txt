@@ -1,0 +1,73 @@
+// Heyy i am writing this to log the write about personal outcome
+
+So far in React course by Andrew Mead I had learned :
+1. React works on component bases structure
+1.1: A component can b stateful and stateless
+1.2: A stateful component is that component interacts with application state
+1.3: We can write statefull component in class based method and functional components as normal JS function
+1.4:Not all browser understand react directly they need transpiling react into normal JS 
+1.5: Hence we use Babel 
+
+2: components accepts two things "props", "state"
+2.1 : For passing props we specify them while calling the components 
+2.2: For passing data from a children component to parent component we neeed to bind that particular function to the parent 
+2.3: React responds for few inbuilt lifecycle functions like 'componentDidMount', 'componentDidUpdate' 'componentDied' similar etc 
+
+3: Andrew taught to build Indecision App that selects a random event from available tasks {We can consider this as an extension to Todo App from JS course}
+3.1: Here he introduces us to Adding a task, deleting a task and picking a random task from them
+3.2: Action generator makes use of third party modal that just appears as similar to an alert box in JavaScript but in alert box it does not the flexibility that a modal gives like clicking outside modal kills it, we can have any{thing or component } inside a modal 
+3.3: Modal can also modified as per need they can customised using custom class
+
+
+4: We started building Expensify together on Stackblitz 
+4.1: Expensify is les with CRUD {Create, Read, Update, Delete} operations,
+4.2: In expensify I have learned to use React-Router that is used or route all the way into our app,
+4.3: How to pick id from a dynamically created component and push it into URL box of browser using "props.params.id" A small buildit "Protfolio App" is also created.
+4.4: Center of Attraction comes into REDUX 
+4.4.1: We cannot build our entire complex application relying on single state object and then passing this same object to hell down the React children Compoent hence we need something like centralised store for our React App States hence we use Redux it provides a store that stores all the important like current State data which can queried to by any child component with ease, 
+4.4.2: Redux Store work with Actions and Reducers 
+4.4.2.1: Action defined what should be performed
+4.4.2.2 : Reducers has state data and Reducers specify how the action should be performed
+4.4.3: Actions are carried to store by dispatching. (dispatch function takes in the action object)
+
+Refer to below comment for something that is provided by the REDUX for our app
+/******Redux: (By Andrew Mead)
+
+redux allows us to maintain state across different trees of app.
+As compared to component state approach where when we want lower level child to get access to state, then state has to passed to all the parent component of the child. {This approach is okay in small application but cannot be fruitfull in complex application}, hence we REDUX 
+
+Redux allows us to have a redux store that can communicate to each and every component effortlessly and also deliver data among different branches of application, hence increasing the reuseability of the component.
+
+Redux can be added to out project by : npm install redux@version_number
+
+Redux give access to named export "createStore"
+eg: const store = createStore((//accepts function// state{count :0} ) => {
+return state})
+
+methods that can be accessed throught store :
+1.store.getState : to get the current state , return the state object 
+eg: store.getState()
+2.store.dispatch : to assign a action to the store 
+eg: store.dispatch ({ type: 'INCREMENT'})
+3.store.subscribe() : to run a specific funtion whenever there's a change or request to store object
+eg: store.subscribe(()=>{console.log(store..getState())}) // log the state object everytime theres a request to store
+4. unsubscribe()  // simply unsubscribe thats returned from store.subscribe()
+******/
+
+4.5: Here we have forked an open source date library by the AirBnB for selection of dates {we have picked two type of Date picker (RangePicker and SingleDatePicker)}
+4.5.1: That was and amazing to see something working in our app that has crated by someone effortlessly
+
+All the basic functionality is working awesome!!
+
+4.6: I am also learning how to run our custom TEST SUITES on our codebase using JEST 
+4.6.1: While writing test script we create identical file structure of ./src/ director to test all the ingredients in the Tests directory
+4.6.2: A JEST test case has following workflow : a) Writing test name 
+b) passing in the second arg an arrow function 
+c) Here inside the arrow we define our test by 
+    1)calling the actual function,
+    2)assert about the expected value and received value using 'expect()' in JEST.
+
+
+****************Till Jest for reducers,Store, actions, selectors. Compoents testing is left here after 
+
+About to explore Snapshot testing...
